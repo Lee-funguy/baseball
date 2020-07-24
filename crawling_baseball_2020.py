@@ -1,6 +1,8 @@
 #%%
+# 부모 Class 경로설정
 import sys
 sys.path.append('C:\\Users\\Chan\\.spyder-py3')
+
 #%%
 # crawling관련 library 불러오기
 from selenium import webdriver
@@ -19,6 +21,13 @@ from sqlalchemy import create_engine
 
 #%%
 class Crawling_baseball(baseball.Database):
+    '''
+    Class Crawling
+    
+        KBO에서 제공하는 경기 기록 데이터 크롤링 및 저장하는 Class
+        
+    '''
+    
     
     def __init__(self):
         
@@ -32,7 +41,7 @@ class Crawling_baseball(baseball.Database):
         self.batter_array = np.empty((1,14))
         self.pitcher_array = np.empty((1,19))
         
-        #기타 쓰이는 변수
+        # 기타 쓰이는 변수
         self.is_start = True # 현재 페이지 시작여부
         self.end = None # 경기종료결과(경기종료, 우천취소 등)
         self.last_game_num_list = list() # 팀 별 마지막 게임 번호 list
