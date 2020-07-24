@@ -21,6 +21,8 @@ from sqlalchemy import create_engine
 class Crawling_baseball(baseball.Database):
     
     def __init__(self):
+        
+        # 팀 번호 dictionary
         self.team_num_dic = {'LG':1,'롯데':2,'KIA':3,'IA':3,'삼성':4,'두산':5,'한화':6,'SK':7,'키움':8,'넥센':8, 'NC':9,'KT':10}
         
         # DB에 넣을 table array생성
