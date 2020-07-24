@@ -15,9 +15,10 @@ import numpy as np
 import datetime
 import baseball.baseball as baseball
 from sqlalchemy import create_engine
+
+
 #%%
 class Crawling_baseball(baseball.Database):
-    
     
     def __init__(self):
         self.team_num_dic = {'LG':1,'롯데':2,'KIA':3,'IA':3,'삼성':4,'두산':5,'한화':6,'SK':7,'키움':8,'넥센':8, 'NC':9,'KT':10}
